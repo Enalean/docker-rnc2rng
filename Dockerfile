@@ -1,4 +1,4 @@
-FROM alpine:3.12.3 AS builder
+FROM alpine:3.13.0 AS builder
 
 ENV TRANG_VERSION=20181222
 ENV TRANG_SHA1SUM=56971f0e32156ed7ec608d5ffd0947b8c0b2519c
@@ -11,7 +11,7 @@ RUN echo "${TRANG_SHA1SUM}  trang-${TRANG_VERSION}.zip" | sha1sum -c
 RUN unzip trang-${TRANG_VERSION}.zip && mv trang-${TRANG_VERSION} trang
 RUN ls -la /trang/
 
-FROM alpine:3.12.3
+FROM alpine:3.13.0
 
 COPY requirements.txt .
 
