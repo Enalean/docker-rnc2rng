@@ -15,7 +15,7 @@ FROM alpine:3.14.0
 
 COPY requirements.txt .
 
-RUN apk add --no-cache make openjdk11-jre py3-pip py-lxml && \
+RUN apk add --no-cache make openjdk11-jre py3-pip py3-lxml && \
     pip install -r requirements.txt
 
 COPY --from=builder /trang/trang.jar /usr/share/java/
