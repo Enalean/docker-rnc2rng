@@ -3,8 +3,7 @@ name: Build and publish Docker images
 on:
   push:
     branches:
-    branches-ignore:
-      - 'dependabot/**'
+      - master
   workflow_dispatch:
 
 permissions:
